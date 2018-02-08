@@ -11,6 +11,7 @@
 #import "News.h"
 #import "NewsContentModel.h"
 #import "NewsContentDetailImgModel.h"
+#import "UIImage+CH.h"
 
 @interface NewsContentViewController ()
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavtionBar];
     NSString *urlString = [NSString stringWithFormat:@"article/%@/full.html",self.news.docid];
     [[NetworkTool shareNetworkTool] objectWIthUrlString:urlString complectionBloack:^(id object, NSError *error) {
         self.detailModel = [NewsContentModel initWithDict:object[self.news.docid]];
@@ -28,6 +30,54 @@
     }];
     
 }
+
+- (void)setupNavtionBar {
+    //2.在自定义的导航栏上面添加按钮
+    UIButton *backBtn=[[UIButton alloc]init];
+    //icon_back_highlighted
+    [backBtn setImage:[UIImage imageNamed:@"icon_back"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"icon_back_highlighted"] forState:UIControlStateHighlighted];
+    [backBtn addTarget:self action:@selector(clickBackBtn:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+    
+    
+    
+    UIButton *replyBtn = [[UIButton alloc]init];
+    [replyBtn setBackgroundImage: [UIImage resizedImage:@"contentview_commentbacky" left:0.5 top:0.5] forState:UIControlStateNormal];
+    [replyBtn setBackgroundImage:[UIImage resizedImage:@"contentview_commentbacky_selected"] forState:UIControlStateHighlighted];
+    [replyBtn setTitle:[NSString stringWithFormat:@"%@",self.news.replyCount] forState:UIControlStateNormal];
+    [replyBtn sizeToFit];
+    replyBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    replyBtn.titleEdgeInsets=UIEdgeInsetsMake(0, -5, 0, 5);
+    
+    [replyBtn addTarget:self action:@selector(clickReplyBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:replyBtn];
+    
+//    self.navigationController.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
+}
+
+- (void)clickBackBtn:(UIButton *)button {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+- (void)clickReplyBtn:(UIButton *)button {
+    
+    
+    
+}
+
+//手势开始的时候触发方法
+//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+//{   //判断如果是系统左滑返回页面的手势就停止掉
+//    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+//    }
+//    return YES;
+//}
+
 #pragma mark webView加载网页数据
 -(void)loadWebViewData
 {

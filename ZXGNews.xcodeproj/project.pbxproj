@@ -43,6 +43,7 @@
 		FE4238D7202C299200E1EF16 /* XWPhotoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4238D3202C299200E1EF16 /* XWPhotoDetailModel.m */; };
 		FE4238D8202C299200E1EF16 /* XWPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4238D5202C299200E1EF16 /* XWPhotoModel.m */; };
 		FED6804B202C2C6600273295 /* XGPhotoBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FED6804A202C2C6600273295 /* XGPhotoBottomView.m */; };
+		FED68052202C4C6E00273295 /* ReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED68051202C4C6E00273295 /* ReplyViewController.m */; };
 		FEE25C751FD692B50030DD82 /* NewsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE25C741FD692B50030DD82 /* NewsContentViewController.m */; };
 		FEE25C791FD695720030DD82 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE25C781FD695720030DD82 /* UIView+ViewController.m */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,8 @@
 		FE4238D6202C299200E1EF16 /* XWPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWPhotoModel.h; sourceTree = "<group>"; };
 		FED68049202C2C6600273295 /* XGPhotoBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGPhotoBottomView.h; sourceTree = "<group>"; };
 		FED6804A202C2C6600273295 /* XGPhotoBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGPhotoBottomView.m; sourceTree = "<group>"; };
+		FED68050202C4C6E00273295 /* ReplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplyViewController.h; sourceTree = "<group>"; };
+		FED68051202C4C6E00273295 /* ReplyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplyViewController.m; sourceTree = "<group>"; };
 		FEE25C731FD692B50030DD82 /* NewsContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsContentViewController.h; sourceTree = "<group>"; };
 		FEE25C741FD692B50030DD82 /* NewsContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsContentViewController.m; sourceTree = "<group>"; };
 		FEE25C771FD695720030DD82 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
@@ -183,6 +186,7 @@
 		FE2FAC441FD1390100181CE4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FED6804C202C488700273295 /* Reply */,
 				FE4238C9202C26A700E1EF16 /* ImageShow */,
 				FE4238C7202C24E000E1EF16 /* detail.css */,
 				FE423878202AD0DE00E1EF16 /* MasonryCellData.json */,
@@ -436,6 +440,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FED6804C202C488700273295 /* Reply */ = {
+			isa = PBXGroup;
+			children = (
+				FED6804D202C488700273295 /* Controller */,
+				FED6804E202C488700273295 /* Model */,
+				FED6804F202C488700273295 /* View */,
+			);
+			path = Reply;
+			sourceTree = "<group>";
+		};
+		FED6804D202C488700273295 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FED68050202C4C6E00273295 /* ReplyViewController.h */,
+				FED68051202C4C6E00273295 /* ReplyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FED6804E202C488700273295 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FED6804F202C488700273295 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FEE25C6F1FD6915C0030DD82 /* NewsCount */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +674,7 @@
 				FE2FAC571FD1390100181CE4 /* HomeViewController.m in Sources */,
 				FE3D24831FD5394B00D2D6A0 /* CycleCollectionViewController.m in Sources */,
 				FE423886202ADF0000E1EF16 /* FriendTableViewCell.m in Sources */,
+				FED68052202C4C6E00273295 /* ReplyViewController.m in Sources */,
 				FE4238C5202C21CA00E1EF16 /* UIImage+CH.m in Sources */,
 				FE2FAC091FD0238200181CE4 /* AppDelegate.m in Sources */,
 				FE423883202ADA6100E1EF16 /* CommonModel.m in Sources */,
