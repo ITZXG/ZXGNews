@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friend Table View Controller-->
+        <scene sceneID="0n2-fg-baj">
+            <objects>
+                <tableViewController storyboardIdentifier="friend" id="XbA-xH-QKZ" customClass="FriendTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sQ1-8g-ing">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PGC-R6-ov5">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PGC-R6-ov5" id="pcq-7B-dx0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XbA-xH-QKZ" id="v8I-1g-s1j"/>
+                            <outlet property="delegate" destination="XbA-xH-QKZ" id="pa1-fY-kbL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="SP9-0L-88e"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWs-M7-2oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="709.29535232383819"/>
+        </scene>
+        <!--网易新闻-->
+        <scene sceneID="o4Q-gg-6Rz">
+            <objects>
+                <viewController storyboardIdentifier="news" id="guv-jj-KfK" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HXi-Ic-hoY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhL-1o-pW2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="SXD-Ex-d3m"/>
+                                </constraints>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pzj-cN-enE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="1" green="0.72935998369999999" blue="0.087648534469999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Wej-q6-1ia">
+                                    <size key="itemSize" width="91" height="78"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="contentCell" id="KAQ-IS-pbF" customClass="NewsContentCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="91" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="guv-jj-KfK" id="se3-mV-vpT"/>
+                                    <outlet property="delegate" destination="guv-jj-KfK" id="NiZ-4c-ySc"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2n2-lJ-er2" firstAttribute="trailing" secondItem="BhL-1o-pW2" secondAttribute="trailing" id="1Xd-i6-cKf"/>
+                            <constraint firstItem="BhL-1o-pW2" firstAttribute="top" secondItem="2n2-lJ-er2" secondAttribute="top" id="4pd-4u-UPU"/>
+                            <constraint firstItem="Pzj-cN-enE" firstAttribute="top" secondItem="BhL-1o-pW2" secondAttribute="bottom" id="5Pk-0M-bgo"/>
+                            <constraint firstItem="BhL-1o-pW2" firstAttribute="leading" secondItem="2n2-lJ-er2" secondAttribute="leading" id="EIK-Ih-DNj"/>
+                            <constraint firstItem="Pzj-cN-enE" firstAttribute="leading" secondItem="HXi-Ic-hoY" secondAttribute="leading" id="VBZ-Bc-4GS"/>
+                            <constraint firstAttribute="bottom" secondItem="Pzj-cN-enE" secondAttribute="bottom" id="YeB-zh-X2C"/>
+                            <constraint firstAttribute="trailing" secondItem="Pzj-cN-enE" secondAttribute="trailing" id="jPi-q5-2zm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2n2-lJ-er2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="网易新闻" id="CLw-OZ-dwh"/>
+                    <connections>
+                        <outlet property="channelScrollView" destination="BhL-1o-pW2" id="OTt-a2-4Vc"/>
+                        <outlet property="collectionFlowLayout" destination="Wej-q6-1ia" id="Uw0-8E-hv4"/>
+                        <outlet property="collectionView" destination="Pzj-cN-enE" id="lnW-ie-t2r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pku-aV-gkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="66.11694152923539"/>
+        </scene>
+    </scenes>
+</document>
