@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZXGNews/Classes/NewsCount/Controller/NewsContentViewController.m"
-            timestampString = "539775533.465438"
+            filePath = "ZXGNews/Classes/Reply/View/XGReplyCell.m"
+            timestampString = "539939687.1837699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-setupNavtionBar"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

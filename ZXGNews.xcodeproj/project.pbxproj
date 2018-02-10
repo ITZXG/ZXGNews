@@ -42,6 +42,9 @@
 		FE4238D2202C28A000E1EF16 /* XGPhotoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4238D1202C28A000E1EF16 /* XGPhotoContentView.m */; };
 		FE4238D7202C299200E1EF16 /* XWPhotoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4238D3202C299200E1EF16 /* XWPhotoDetailModel.m */; };
 		FE4238D8202C299200E1EF16 /* XWPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4238D5202C299200E1EF16 /* XWPhotoModel.m */; };
+		FE9CFB9F202E95F100DB9B52 /* XGReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9CFB9E202E95F100DB9B52 /* XGReplyModel.m */; };
+		FE9CFBA2202E9AAF00DB9B52 /* XWReplyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9CFBA1202E9AAE00DB9B52 /* XWReplyHeaderView.m */; };
+		FE9CFBA5202E9CFB00DB9B52 /* XGReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9CFBA4202E9CFB00DB9B52 /* XGReplyCell.m */; };
 		FED6804B202C2C6600273295 /* XGPhotoBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = FED6804A202C2C6600273295 /* XGPhotoBottomView.m */; };
 		FED68052202C4C6E00273295 /* ReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED68051202C4C6E00273295 /* ReplyViewController.m */; };
 		FEE25C751FD692B50030DD82 /* NewsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE25C741FD692B50030DD82 /* NewsContentViewController.m */; };
@@ -114,6 +117,12 @@
 		FE4238D4202C299200E1EF16 /* XWPhotoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWPhotoDetailModel.h; sourceTree = "<group>"; };
 		FE4238D5202C299200E1EF16 /* XWPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWPhotoModel.m; sourceTree = "<group>"; };
 		FE4238D6202C299200E1EF16 /* XWPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWPhotoModel.h; sourceTree = "<group>"; };
+		FE9CFB9D202E95F100DB9B52 /* XGReplyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGReplyModel.h; sourceTree = "<group>"; };
+		FE9CFB9E202E95F100DB9B52 /* XGReplyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGReplyModel.m; sourceTree = "<group>"; };
+		FE9CFBA0202E9AAE00DB9B52 /* XWReplyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWReplyHeaderView.h; sourceTree = "<group>"; };
+		FE9CFBA1202E9AAE00DB9B52 /* XWReplyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWReplyHeaderView.m; sourceTree = "<group>"; };
+		FE9CFBA3202E9CFB00DB9B52 /* XGReplyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGReplyCell.h; sourceTree = "<group>"; };
+		FE9CFBA4202E9CFB00DB9B52 /* XGReplyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGReplyCell.m; sourceTree = "<group>"; };
 		FED68049202C2C6600273295 /* XGPhotoBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGPhotoBottomView.h; sourceTree = "<group>"; };
 		FED6804A202C2C6600273295 /* XGPhotoBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGPhotoBottomView.m; sourceTree = "<group>"; };
 		FED68050202C4C6E00273295 /* ReplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplyViewController.h; sourceTree = "<group>"; };
@@ -462,6 +471,8 @@
 		FED6804E202C488700273295 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE9CFB9D202E95F100DB9B52 /* XGReplyModel.h */,
+				FE9CFB9E202E95F100DB9B52 /* XGReplyModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -469,6 +480,10 @@
 		FED6804F202C488700273295 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE9CFBA0202E9AAE00DB9B52 /* XWReplyHeaderView.h */,
+				FE9CFBA1202E9AAE00DB9B52 /* XWReplyHeaderView.m */,
+				FE9CFBA3202E9CFB00DB9B52 /* XGReplyCell.h */,
+				FE9CFBA4202E9CFB00DB9B52 /* XGReplyCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -656,7 +671,9 @@
 				FE4238B6202C20D100E1EF16 /* NewsContentModel.m in Sources */,
 				FE3D24861FD53BEF00D2D6A0 /* CycleCollectionViewCell.m in Sources */,
 				FE4238B9202C212C00E1EF16 /* NewsContentDetailImgModel.m in Sources */,
+				FE9CFB9F202E95F100DB9B52 /* XGReplyModel.m in Sources */,
 				FE4238D2202C28A000E1EF16 /* XGPhotoContentView.m in Sources */,
+				FE9CFBA2202E9AAF00DB9B52 /* XWReplyHeaderView.m in Sources */,
 				FE2FAC6B1FD148E200181CE4 /* NetworkTool.m in Sources */,
 				FE3D24891FD53C0000D2D6A0 /* Cycle.m in Sources */,
 				FE2FAC641FD13F1E00181CE4 /* NewsTableViewController.m in Sources */,
@@ -666,6 +683,7 @@
 				FE4238D7202C299200E1EF16 /* XWPhotoDetailModel.m in Sources */,
 				FE2FAC671FD1462D00181CE4 /* News.m in Sources */,
 				FE2FAC551FD1390100181CE4 /* Channel.m in Sources */,
+				FE9CFBA5202E9CFB00DB9B52 /* XGReplyCell.m in Sources */,
 				FE423880202AD41E00E1EF16 /* FriendTableViewController.m in Sources */,
 				FE4238C3202C21CA00E1EF16 /* NSDate+CH.m in Sources */,
 				FE2FAC6E1FD15E1700181CE4 /* NewsCell.m in Sources */,

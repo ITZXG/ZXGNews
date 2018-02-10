@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class News;
 @interface ReplyViewController : UIViewController
-
+@property (nonatomic, strong) News *news;
 @end

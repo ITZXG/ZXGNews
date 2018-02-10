@@ -82,5 +82,18 @@ typedef void(^FinishedBlock) (NSArray *NewsList);
 // 大图标记
 @property (nonatomic, assign) BOOL imgType;
 @property (nonatomic, copy) NSString *urlString;
+@property (nonatomic,copy) NSString *boardid;
+@property (nonatomic,copy) NSString *commentid;
+@property (nonatomic,copy)NSNumber *speciallogo;
+@property (nonatomic,copy) NSString *specialtip;
+@property (nonatomic,copy) NSString *specialadlogo;
+
+@property (nonatomic,copy) NSString *pixel;
+@property (nonatomic,strong)NSArray *applist;
+
+@property (nonatomic,copy) NSString *wap_portal;
+@property (nonatomic,copy) NSString *live_info;
+@property (nonatomic,copy) NSString *ads;
+@property (nonatomic,copy) NSString *videosource;
 + (void)newsListWithUrlString:(NSString *)urlString finishedBlock:(FinishedBlock)finishedBlock;
 @end

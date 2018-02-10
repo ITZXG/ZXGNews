@@ -12,6 +12,7 @@
 #import "NewsContentModel.h"
 #import "NewsContentDetailImgModel.h"
 #import "UIImage+CH.h"
+#import "ReplyViewController.h"
 
 @interface NewsContentViewController ()
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
@@ -65,18 +66,10 @@
 
 - (void)clickReplyBtn:(UIButton *)button {
     
-    
-    
+    ReplyViewController *replyVC = [[ReplyViewController alloc]init];
+    replyVC.news = self.news;
+    [self.navigationController pushViewController:replyVC animated:YES];
 }
-
-//手势开始的时候触发方法
-//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
-//{   //判断如果是系统左滑返回页面的手势就停止掉
-//    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-//        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-//    }
-//    return YES;
-//}
 
 #pragma mark webView加载网页数据
 -(void)loadWebViewData
